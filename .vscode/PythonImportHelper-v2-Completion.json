@@ -1,0 +1,477 @@
+[
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "House",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "Apartment",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "Tariff",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeter",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeterData",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "ApiConfig",
+        "kind": 6,
+        "importPath": "jkh_assistant.api.apps",
+        "description": "jkh_assistant.api.apps",
+        "peekOfCode": "class ApiConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'api'",
+        "detail": "jkh_assistant.api.apps",
+        "documentation": {}
+    },
+    {
+        "label": "InfrastructureConfig",
+        "kind": 6,
+        "importPath": "jkh_assistant.infrastructure.apps",
+        "description": "jkh_assistant.infrastructure.apps",
+        "peekOfCode": "class InfrastructureConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'infrastructure'",
+        "detail": "jkh_assistant.infrastructure.apps",
+        "documentation": {}
+    },
+    {
+        "label": "House",
+        "kind": 6,
+        "importPath": "jkh_assistant.infrastructure.models",
+        "description": "jkh_assistant.infrastructure.models",
+        "peekOfCode": "class House(models.Model):\n    \"\"\"Модель Дома.\"\"\"\n    address = models.CharField(\n        max_length=settings.MAX_STR_LENGTH,\n        verbose_name=\"Адрес:\",\n        help_text=\"укажите адрес дома\"\n    )\n    name = models.CharField(\n        max_length=settings.MAX_STR_LENGTH,\n        unique=True,",
+        "detail": "jkh_assistant.infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "Apartment",
+        "kind": 6,
+        "importPath": "jkh_assistant.infrastructure.models",
+        "description": "jkh_assistant.infrastructure.models",
+        "peekOfCode": "class Apartment(models.Model):\n    \"\"\"Модель квартир.\"\"\"\n    house = models.ForeignKey(\n        House,\n        related_name=\"apartments\",\n        on_delete=models.CASCADE,\n        verbose_name=\"Дом:\",\n        help_text=\"укажите дом, в котором находится квартира\"\n    )\n    number = models.PositiveSmallIntegerField(",
+        "detail": "jkh_assistant.infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeter",
+        "kind": 6,
+        "importPath": "jkh_assistant.infrastructure.models",
+        "description": "jkh_assistant.infrastructure.models",
+        "peekOfCode": "class WaterMeter(models.Model):\n    \"\"\"Модель счетчиков.\"\"\"\n    apartment = models.ForeignKey(\n        Apartment,\n        related_name=\"water_meters\",\n        on_delete=models.CASCADE,\n        verbose_name=\"Квартира:\",\n        help_text=\"укажите квартиру, в которой установлен счетчик\"\n    )\n    serial_number = models.CharField(",
+        "detail": "jkh_assistant.infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeterData",
+        "kind": 6,
+        "importPath": "jkh_assistant.infrastructure.models",
+        "description": "jkh_assistant.infrastructure.models",
+        "peekOfCode": "class WaterMeterData(models.Model):\n    \"\"\"Модель данных для каждого счетчика.\"\"\"\n    water_meter = models.ForeignKey(\n        WaterMeter,\n        related_name=\"readings\",\n        on_delete=models.CASCADE,\n        verbose_name=\"Счетчик:\",\n        help_text=\"укажите счетчик, для которого вводятся показания\"\n    )\n    reading_date = models.DateField(",
+        "detail": "jkh_assistant.infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "Tariff",
+        "kind": 6,
+        "importPath": "jkh_assistant.infrastructure.models",
+        "description": "jkh_assistant.infrastructure.models",
+        "peekOfCode": "class Tariff(models.Model):\n    \"\"\"Модель тарифа.\"\"\"\n    name = models.CharField(\n        max_length=settings.MAX_STR_LENGTH,\n        verbose_name=\"Название:\",\n        help_text=\"укажите название тарифа\"\n    )\n    price_per_unit = models.PositiveSmallIntegerField(\n        verbose_name=\"Стоимость:\",\n        help_text=\"укажите стоимость в рублях за единицу ресурса\"",
+        "detail": "jkh_assistant.infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.asgi",
+        "description": "jkh_assistant.jkh_assistant.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "jkh_assistant.jkh_assistant.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.getenv(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = os.getenv(\"DEBUG\")\nALLOWED_HOSTS = os.getenv(\"ALLOWED_HOSTS\").split(\",\")\nALLOWED_ORIGINS = []\ndomains = os.getenv(\"ALLOWED_ORIGINS\").split(\",\")",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = os.getenv(\"DEBUG\")\nALLOWED_HOSTS = os.getenv(\"ALLOWED_HOSTS\").split(\",\")\nALLOWED_ORIGINS = []\ndomains = os.getenv(\"ALLOWED_ORIGINS\").split(\",\")\nfor i in domains:\n    ALLOWED_ORIGINS.append(f\"http://{i}\")\n    ALLOWED_ORIGINS.append(f\"https://{i}\")\nCSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "DEBUG = os.getenv(\"DEBUG\")\nALLOWED_HOSTS = os.getenv(\"ALLOWED_HOSTS\").split(\",\")\nALLOWED_ORIGINS = []\ndomains = os.getenv(\"ALLOWED_ORIGINS\").split(\",\")\nfor i in domains:\n    ALLOWED_ORIGINS.append(f\"http://{i}\")\n    ALLOWED_ORIGINS.append(f\"https://{i}\")\nCSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()\nCORS_ALLOWED_ORIGINS = ALLOWED_ORIGINS\n# Application definition",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "ALLOWED_HOSTS = os.getenv(\"ALLOWED_HOSTS\").split(\",\")\nALLOWED_ORIGINS = []\ndomains = os.getenv(\"ALLOWED_ORIGINS\").split(\",\")\nfor i in domains:\n    ALLOWED_ORIGINS.append(f\"http://{i}\")\n    ALLOWED_ORIGINS.append(f\"https://{i}\")\nCSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()\nCORS_ALLOWED_ORIGINS = ALLOWED_ORIGINS\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "ALLOWED_ORIGINS = []\ndomains = os.getenv(\"ALLOWED_ORIGINS\").split(\",\")\nfor i in domains:\n    ALLOWED_ORIGINS.append(f\"http://{i}\")\n    ALLOWED_ORIGINS.append(f\"https://{i}\")\nCSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()\nCORS_ALLOWED_ORIGINS = ALLOWED_ORIGINS\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "domains",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "domains = os.getenv(\"ALLOWED_ORIGINS\").split(\",\")\nfor i in domains:\n    ALLOWED_ORIGINS.append(f\"http://{i}\")\n    ALLOWED_ORIGINS.append(f\"https://{i}\")\nCSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()\nCORS_ALLOWED_ORIGINS = ALLOWED_ORIGINS\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CSRF_TRUSTED_ORIGINS",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()\nCORS_ALLOWED_ORIGINS = ALLOWED_ORIGINS\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = ALLOWED_ORIGINS\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    'corsheaders',",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    'corsheaders',\n    'rest_framework',\n    \"api.apps.ApiConfig\",",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n]\nROOT_URLCONF = \"jkh_assistant.urls\"",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "ROOT_URLCONF = \"jkh_assistant.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "WSGI_APPLICATION = \"jkh_assistant.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.postgresql\",\n        \"NAME\": os.environ.get(\"POSTGRES_DB\", \"default\"),\n        \"USER\": os.environ.get(\n            \"POSTGRES_USER\", \"postgres\"\n        ),",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.postgresql\",\n        \"NAME\": os.environ.get(\"POSTGRES_DB\", \"default\"),\n        \"USER\": os.environ.get(\n            \"POSTGRES_USER\", \"postgres\"\n        ),\n        \"PASSWORD\": os.environ.get(\n            \"POSTGRES_PASSWORD\", \"postgres\"\n        ),",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\",\n    },",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nMAX_STR_LENGTH = 255",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nMAX_STR_LENGTH = 255",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nMAX_STR_LENGTH = 255",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "STATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nMAX_STR_LENGTH = 255",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nMAX_STR_LENGTH = 255",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_STR_LENGTH",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "MAX_STR_LENGTH = 255",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.urls",
+        "description": "jkh_assistant.jkh_assistant.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n]",
+        "detail": "jkh_assistant.jkh_assistant.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.wsgi",
+        "description": "jkh_assistant.jkh_assistant.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "jkh_assistant.jkh_assistant.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "jkh_assistant.manage",
+        "description": "jkh_assistant.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'jkh_assistant.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "jkh_assistant.manage",
+        "documentation": {}
+    }
+]
