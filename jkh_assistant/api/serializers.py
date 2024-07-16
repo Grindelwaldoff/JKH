@@ -2,7 +2,6 @@ from rest_framework import serializers
 
 from infrastructure.models import (
     House,
-    Tariff,
     Apartment,
     WaterMeter,
     WaterMeterData,
@@ -13,23 +12,23 @@ class WaterMeterDataSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = WaterMeterData
-        fields = ('id', "value", "date")
+        fields = ("id", "value", "date")
 
 
 class WaterMeterSerializer(serializers.ModelSerializer):
-    values = WaterMeterDataSerializer(many=True, read_only=True)
+    readings = WaterMeterDataSerializer(many=True, required=False)
 
     class Meta:
         model = WaterMeter
         fields = (
-            'id',
+            "id",
             "serial_number",
-            "values",
+            "readings",
         )
 
 
 class ApartmentSerializer(serializers.ModelSerializer):
-    water_meters = WaterMeterSerializer(many=True, read_only=True)
+    water_meters = WaterMeterSerializer(many=True, required=False)
 
     class Meta:
         model = Apartment
@@ -42,7 +41,7 @@ class ApartmentSerializer(serializers.ModelSerializer):
 
 
 class HouseSerializer(serializers.ModelSerializer):
-    apartments = ApartmentSerializer(read_only=True)
+    apartments = ApartmentSerializer(many=True, required=False)
 
     class Meta:
         model = House

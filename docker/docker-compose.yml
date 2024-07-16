@@ -1,0 +1,38 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres:13.0-alpine
+    volumes:
+      - pgdata:/var/lib/postgres/data/
+    env_file:
+      - ../.env
+  web:
+    build: ../jkh_assistant
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ../jkh_assistant:/usr/src/app/
+    ports:
+      - 8000:8000
+    env_file:
+      - ../.env
+    depends_on:
+      - redis
+      - db
+
+  celery:
+    build: ../jkh_assistant
+    command: celery -A jkh_assistant worker  --loglevel=info
+    volumes:
+      - ../jkh_assistant:/usr/src/app
+    env_file:
+      - ../.env
+    depends_on:
+      - web
+      - redis
+
+  redis:
+    image: redis:5-alpine
+
+volumes:
+  pgdata:

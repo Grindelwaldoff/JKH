@@ -28,11 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG")
+DEBUG = os.getenv("DEBUG", False)
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split(",")
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "*").split(",")
 ALLOWED_ORIGINS = []
-domains = os.getenv("ALLOWED_ORIGINS").split(",")
+domains = os.getenv("ALLOWED_ORIGINS", "127.0.0.1").split(",")
 for i in domains:
     ALLOWED_ORIGINS.append(f"http://{i}")
     ALLOWED_ORIGINS.append(f"https://{i}")
@@ -42,14 +42,15 @@ CORS_ALLOWED_ORIGINS = ALLOWED_ORIGINS
 # Application definition
 
 INSTALLED_APPS = [
+    "corsheaders",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'corsheaders',
-    'rest_framework',
+    "drf_spectacular",
+    "rest_framework",
     "api.apps.ApiConfig",
     "infrastructure.apps.InfrastructureConfig",
 ]
@@ -91,24 +92,18 @@ WSGI_APPLICATION = "jkh_assistant.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("POSTGRES_DB", "default"),
-        "USER": os.environ.get(
-            "POSTGRES_USER", "postgres"
-        ),
-        "PASSWORD": os.environ.get(
-            "POSTGRES_PASSWORD", "postgres"
-        ),
-        "HOST": os.environ.get(
-            "DB_HOST", "postgres"
-        ),
-        "PORT": os.environ.get("POSTGRES_PORT", "5432"),
+        "NAME": os.environ.get("DB_NAME", "postgres"),
+        "USER": os.environ.get("POSTGRES_USER", "postgres"),
+        "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "postgres"),
+        "HOST": os.environ.get("DB_HOST", "db"),
+        "PORT": os.environ.get("DB_PORT", "5432"),
     }
 }
 if DEBUG:
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
+            "NAME": BASE_DIR / "jkh.db",
         }
     }
 
@@ -147,24 +142,42 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
 REST_FRAMEWORK = {
-    'DATE_FORMAT': "%d.%m.%Y",
-    'TIME_FORMAT': "%H:%M",
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 20,
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
-    "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.AllowAny"
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DATE_FORMAT": "%d.%m.%Y",
+    "TIME_FORMAT": "%H:%M",
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    "PAGE_SIZE": 20,
+    "DEFAULT_FILTER_BACKENDS": [
+        "django_filters.rest_framework.DjangoFilterBackend"
     ],
+    "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny"],
 }
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
+SPECTACULAR_SETTINGS = {
+    "TITLE": "TransportStatsApi",
+    "DESCRIPTION": "...",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+    "ENUM_NAME_OVERRIDES": {"status": "CustomStatusEnum"},
+    "ENUM_ADD_EXPLICIT_BLANK_NULL_CHOICE": True,
+}
+
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+CELERY_BROKER_URL = os.environ.get("CELERY_BROKER", "redis://localhost:6379/0")
+CELERY_RESULT_BACKEND = os.environ.get(
+    "CELERY_BROKER", "redis://localhost:6379/0"
+)
 MAX_STR_LENGTH = 255
+TYPE_RESULT = (
+        ('rent', 'rent'),
+        ('water_meter', 'water_meter')
+    )

@@ -1,4 +1,6 @@
 import factory
+from factory import fuzzy
+from datetime import datetime, timedelta
 from infrastructure.models import (
     House,
     Apartment,
@@ -13,7 +15,7 @@ class HouseFactory(factory.django.DjangoModelFactory):
         model = House
 
     address = factory.Faker("address")
-    name = factory.Faker("word")
+    name = factory.Faker("name")
 
 
 class ApartmentFactory(factory.django.DjangoModelFactory):
@@ -37,9 +39,39 @@ class WaterMeterDataFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = WaterMeterData
 
-    date = factory.Faker("date")
-    value = factory.Faker("pyfloat", positive=True, min_value=1, max_value=10000)
+    value = factory.LazyAttribute(
+        lambda o: WaterMeterDataFactory._generate_value()
+    )
+    date = factory.LazyAttribute(
+        lambda o: WaterMeterDataFactory._generate_date()
+    )
     water_meter = factory.SubFactory(WaterMeterFactory)
+
+    @staticmethod
+    def _generate_value():
+        return fuzzy.FuzzyInteger(1000, 10000).fuzz()
+
+    @staticmethod
+    def _generate_date():
+        today = datetime.now()
+        months_ago = fuzzy.FuzzyInteger(1, 12).fuzz()
+        past_date = today - timedelta(days=months_ago * 30)
+        return past_date.strftime("%Y-%m-%d")
+
+    @factory.post_generation
+    def set_previous_values(self, create, extracted, **kwargs):
+        if extracted:
+            previous_data = []
+            for i in range(extracted):
+                past_date = self.date - timedelta(days=(i + 1) * 30)
+                previous_data.append(
+                    WaterMeterData(
+                        water_meter=self.water_meter,
+                        value=self.value - (i + 1) * 100,
+                        date=past_date,
+                    )
+                )
+            WaterMeterData.objects.bulk_create(previous_data)
 
 
 class TariffFactory(factory.django.DjangoModelFactory):

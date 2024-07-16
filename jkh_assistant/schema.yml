@@ -1,0 +1,965 @@
+openapi: 3.0.3
+info:
+  title: TransportStatsApi
+  version: 1.0.0
+  description: '...'
+paths:
+  /api/v1/apartments/:
+    get:
+      operationId: api_v1_apartments_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedApartmentList'
+          description: ''
+    post:
+      operationId: api_v1_apartments_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Apartment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Apartment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Apartment'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Apartment'
+          description: ''
+  /api/v1/apartments/{id}/:
+    get:
+      operationId: api_v1_apartments_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this apartment.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Apartment'
+          description: ''
+    put:
+      operationId: api_v1_apartments_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this apartment.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Apartment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Apartment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Apartment'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Apartment'
+          description: ''
+    patch:
+      operationId: api_v1_apartments_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this apartment.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedApartment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedApartment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedApartment'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Apartment'
+          description: ''
+    delete:
+      operationId: api_v1_apartments_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this apartment.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v1/houses/:
+    get:
+      operationId: api_v1_houses_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedHouseList'
+          description: ''
+    post:
+      operationId: api_v1_houses_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/House'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/House'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/House'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/House'
+          description: ''
+  /api/v1/houses/{id}/:
+    get:
+      operationId: api_v1_houses_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this house.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/House'
+          description: ''
+    put:
+      operationId: api_v1_houses_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this house.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/House'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/House'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/House'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/House'
+          description: ''
+    patch:
+      operationId: api_v1_houses_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this house.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedHouse'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedHouse'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedHouse'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/House'
+          description: ''
+    delete:
+      operationId: api_v1_houses_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this house.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v1/tasks/{id}/get_result/:
+    get:
+      operationId: api_v1_tasks_get_result_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/tasks/create_task/:
+    post:
+      operationId: api_v1_tasks_create_task_create
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v1/water-meters/:
+    get:
+      operationId: api_v1_water_meters_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedWaterMeterList'
+          description: ''
+    post:
+      operationId: api_v1_water_meters_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WaterMeter'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/WaterMeter'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/WaterMeter'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WaterMeter'
+          description: ''
+  /api/v1/water-meters/{id}/:
+    get:
+      operationId: api_v1_water_meters_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this water meter.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WaterMeter'
+          description: ''
+    put:
+      operationId: api_v1_water_meters_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this water meter.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WaterMeter'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/WaterMeter'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/WaterMeter'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WaterMeter'
+          description: ''
+    patch:
+      operationId: api_v1_water_meters_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this water meter.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedWaterMeter'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedWaterMeter'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedWaterMeter'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WaterMeter'
+          description: ''
+    delete:
+      operationId: api_v1_water_meters_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this water meter.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v1/water-meters/data/:
+    get:
+      operationId: api_v1_water_meters_data_list
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedWaterMeterDataList'
+          description: ''
+    post:
+      operationId: api_v1_water_meters_data_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WaterMeterData'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/WaterMeterData'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/WaterMeterData'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WaterMeterData'
+          description: ''
+  /api/v1/water-meters/data/{id}/:
+    get:
+      operationId: api_v1_water_meters_data_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this water meter data.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WaterMeterData'
+          description: ''
+    put:
+      operationId: api_v1_water_meters_data_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this water meter data.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WaterMeterData'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/WaterMeterData'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/WaterMeterData'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WaterMeterData'
+          description: ''
+    patch:
+      operationId: api_v1_water_meters_data_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this water meter data.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedWaterMeterData'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedWaterMeterData'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedWaterMeterData'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WaterMeterData'
+          description: ''
+    delete:
+      operationId: api_v1_water_meters_data_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this water meter data.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+components:
+  schemas:
+    Apartment:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        number:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          title: 'Номер квартиры:'
+          description: укажите номер квартиры
+        area:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          title: 'Площадь квартиры:'
+          description: укажите площадь квартиры в квадратных метрах
+        water_meters:
+          type: array
+          items:
+            $ref: '#/components/schemas/WaterMeter'
+      required:
+      - area
+      - id
+      - number
+    House:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        address:
+          type: string
+          title: 'Адрес:'
+          description: укажите адрес дома
+          maxLength: 255
+        name:
+          type: string
+          title: 'Название:'
+          description: укажите название дома
+          maxLength: 255
+        apartments:
+          type: array
+          items:
+            $ref: '#/components/schemas/Apartment'
+      required:
+      - address
+      - id
+      - name
+    PaginatedApartmentList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Apartment'
+    PaginatedHouseList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/House'
+    PaginatedWaterMeterDataList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/WaterMeterData'
+    PaginatedWaterMeterList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/WaterMeter'
+    PatchedApartment:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        number:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          title: 'Номер квартиры:'
+          description: укажите номер квартиры
+        area:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          title: 'Площадь квартиры:'
+          description: укажите площадь квартиры в квадратных метрах
+        water_meters:
+          type: array
+          items:
+            $ref: '#/components/schemas/WaterMeter'
+    PatchedHouse:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        address:
+          type: string
+          title: 'Адрес:'
+          description: укажите адрес дома
+          maxLength: 255
+        name:
+          type: string
+          title: 'Название:'
+          description: укажите название дома
+          maxLength: 255
+        apartments:
+          type: array
+          items:
+            $ref: '#/components/schemas/Apartment'
+    PatchedWaterMeter:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        serial_number:
+          type: string
+          title: 'Серийный номер:'
+          description: укажите серийный номер счетчика
+          maxLength: 255
+        readings:
+          type: array
+          items:
+            $ref: '#/components/schemas/WaterMeterData'
+    PatchedWaterMeterData:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        value:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          title: 'Показание:'
+          description: укажите значение показания счетчика
+        date:
+          type: string
+          format: date
+          readOnly: true
+          title: 'Дата показания:'
+          description: укажите дату снятия показания
+    WaterMeter:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        serial_number:
+          type: string
+          title: 'Серийный номер:'
+          description: укажите серийный номер счетчика
+          maxLength: 255
+        readings:
+          type: array
+          items:
+            $ref: '#/components/schemas/WaterMeterData'
+      required:
+      - id
+      - serial_number
+    WaterMeterData:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        value:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: 0
+          format: int64
+          title: 'Показание:'
+          description: укажите значение показания счетчика
+        date:
+          type: string
+          format: date
+          readOnly: true
+          title: 'Дата показания:'
+          description: укажите дату снятия показания
+      required:
+      - date
+      - id
+      - value
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
