@@ -75,17 +75,17 @@ class WaterMeterData(models.Model):
         verbose_name="Счетчик:",
         help_text="укажите счетчик, для которого вводятся показания"
     )
-    reading_date = models.DateField(
+    date = models.DateField(
         verbose_name="Дата показания:",
         help_text="укажите дату снятия показания"
     )
-    reading_value = models.PositiveIntegerField(
+    value = models.PositiveIntegerField(
         verbose_name="Показание:",
         help_text="укажите значение показания счетчика"
     )
 
     class Meta:
-        unique_together = ("water_meter", "reading_date")
+        unique_together = ("water_meter", "date")
 
     def __str__(self):
         return f"{self.water_meter.serial_number} / {self.reading_date}"

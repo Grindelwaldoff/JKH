@@ -1,29 +1,5 @@
 [
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
         "label": "AppConfig",
         "importPath": "django.apps",
         "description": "django.apps",
@@ -40,35 +16,11 @@
         "documentation": {}
     },
     {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
         "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
+        "detail": "rest_framework",
         "documentation": {}
     },
     {
@@ -80,7 +32,7 @@
         "documentation": {}
     },
     {
-        "label": "Apartment",
+        "label": "Tariff",
         "importPath": "infrastructure.models",
         "description": "infrastructure.models",
         "isExtraImport": true,
@@ -88,7 +40,7 @@
         "documentation": {}
     },
     {
-        "label": "Tariff",
+        "label": "Apartment",
         "importPath": "infrastructure.models",
         "description": "infrastructure.models",
         "isExtraImport": true,
@@ -109,6 +61,255 @@
         "description": "infrastructure.models",
         "isExtraImport": true,
         "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "House",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "Tariff",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "Apartment",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeter",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeterData",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "House",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "Tariff",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "Apartment",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeter",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeterData",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "House",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "Apartment",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeter",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeterData",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "Tariff",
+        "importPath": "infrastructure.models",
+        "description": "infrastructure.models",
+        "isExtraImport": true,
+        "detail": "infrastructure.models",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultRouter",
+        "importPath": "rest_framework.routers",
+        "description": "rest_framework.routers",
+        "isExtraImport": true,
+        "detail": "rest_framework.routers",
+        "documentation": {}
+    },
+    {
+        "label": "HouseViewSet",
+        "importPath": "api.views",
+        "description": "api.views",
+        "isExtraImport": true,
+        "detail": "api.views",
+        "documentation": {}
+    },
+    {
+        "label": "ModelViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "HouseSerializer",
+        "importPath": "api.serializers",
+        "description": "api.serializers",
+        "isExtraImport": true,
+        "detail": "api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -153,11 +354,11 @@
         "documentation": {}
     },
     {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
         "isExtraImport": true,
-        "detail": "django.urls",
+        "detail": "django.conf.urls.static",
         "documentation": {}
     },
     {
@@ -178,12 +379,151 @@
         "documentation": {}
     },
     {
+        "label": "factory",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "factory",
+        "description": "factory",
+        "detail": "factory",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "HouseFactory",
+        "importPath": "tests.fixtures.factories",
+        "description": "tests.fixtures.factories",
+        "isExtraImport": true,
+        "detail": "tests.fixtures.factories",
+        "documentation": {}
+    },
+    {
+        "label": "TariffFactory",
+        "importPath": "tests.fixtures.factories",
+        "description": "tests.fixtures.factories",
+        "isExtraImport": true,
+        "detail": "tests.fixtures.factories",
+        "documentation": {}
+    },
+    {
+        "label": "ApartmentFactory",
+        "importPath": "tests.fixtures.factories",
+        "description": "tests.fixtures.factories",
+        "isExtraImport": true,
+        "detail": "tests.fixtures.factories",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeterFactory",
+        "importPath": "tests.fixtures.factories",
+        "description": "tests.fixtures.factories",
+        "isExtraImport": true,
+        "detail": "tests.fixtures.factories",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeterDataFactory",
+        "importPath": "tests.fixtures.factories",
+        "description": "tests.fixtures.factories",
+        "isExtraImport": true,
+        "detail": "tests.fixtures.factories",
+        "documentation": {}
+    },
+    {
         "label": "ApiConfig",
         "kind": 6,
         "importPath": "jkh_assistant.api.apps",
         "description": "jkh_assistant.api.apps",
         "peekOfCode": "class ApiConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'api'",
         "detail": "jkh_assistant.api.apps",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeterDataSerializer",
+        "kind": 6,
+        "importPath": "jkh_assistant.api.serializers",
+        "description": "jkh_assistant.api.serializers",
+        "peekOfCode": "class WaterMeterDataSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = WaterMeterData\n        fields = ('id', \"value\", \"date\")\nclass WaterMeterSerializer(serializers.ModelSerializer):\n    values = WaterMeterDataSerializer(many=True, read_only=True)\n    class Meta:\n        model = WaterMeter\n        fields = (\n            'id',",
+        "detail": "jkh_assistant.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeterSerializer",
+        "kind": 6,
+        "importPath": "jkh_assistant.api.serializers",
+        "description": "jkh_assistant.api.serializers",
+        "peekOfCode": "class WaterMeterSerializer(serializers.ModelSerializer):\n    values = WaterMeterDataSerializer(many=True, read_only=True)\n    class Meta:\n        model = WaterMeter\n        fields = (\n            'id',\n            \"serial_number\",\n            \"values\",\n        )\nclass ApartmentSerializer(serializers.ModelSerializer):",
+        "detail": "jkh_assistant.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ApartmentSerializer",
+        "kind": 6,
+        "importPath": "jkh_assistant.api.serializers",
+        "description": "jkh_assistant.api.serializers",
+        "peekOfCode": "class ApartmentSerializer(serializers.ModelSerializer):\n    water_meters = WaterMeterSerializer(many=True, read_only=True)\n    class Meta:\n        model = Apartment\n        fields = (\n            \"id\",\n            \"number\",\n            \"area\",\n            \"water_meters\",\n        )",
+        "detail": "jkh_assistant.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "HouseSerializer",
+        "kind": 6,
+        "importPath": "jkh_assistant.api.serializers",
+        "description": "jkh_assistant.api.serializers",
+        "peekOfCode": "class HouseSerializer(serializers.ModelSerializer):\n    apartments = ApartmentSerializer(read_only=True)\n    class Meta:\n        model = House\n        fields = (\"id\", \"address\", \"name\", \"apartments\")",
+        "detail": "jkh_assistant.api.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "jkh_assistant.api.urls",
+        "description": "jkh_assistant.api.urls",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register('house', HouseViewSet)\nurlpatterns = [\n    path('api/v1/', include(router.urls)),\n]",
+        "detail": "jkh_assistant.api.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "jkh_assistant.api.urls",
+        "description": "jkh_assistant.api.urls",
+        "peekOfCode": "urlpatterns = [\n    path('api/v1/', include(router.urls)),\n]",
+        "detail": "jkh_assistant.api.urls",
+        "documentation": {}
+    },
+    {
+        "label": "HouseViewSet",
+        "kind": 6,
+        "importPath": "jkh_assistant.api.views",
+        "description": "jkh_assistant.api.views",
+        "peekOfCode": "class HouseViewSet(ModelViewSet):\n    queryset = House.objects.all()\n    serializer_class = HouseSerializer",
+        "detail": "jkh_assistant.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "jkh_assistant.infrastructure.migrations.0001_initial",
+        "description": "jkh_assistant.infrastructure.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='House',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('address', models.CharField(help_text='укажите адрес дома', max_length=255, verbose_name='Адрес:')),",
+        "detail": "jkh_assistant.infrastructure.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "jkh_assistant.infrastructure.migrations.0002_rename_reading_date_watermeterdata_date_and_more",
+        "description": "jkh_assistant.infrastructure.migrations.0002_rename_reading_date_watermeterdata_date_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('infrastructure', '0001_initial'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='watermeterdata',\n            old_name='reading_date',\n            new_name='date',\n        ),",
+        "detail": "jkh_assistant.infrastructure.migrations.0002_rename_reading_date_watermeterdata_date_and_more",
         "documentation": {}
     },
     {
@@ -227,7 +567,7 @@
         "kind": 6,
         "importPath": "jkh_assistant.infrastructure.models",
         "description": "jkh_assistant.infrastructure.models",
-        "peekOfCode": "class WaterMeterData(models.Model):\n    \"\"\"Модель данных для каждого счетчика.\"\"\"\n    water_meter = models.ForeignKey(\n        WaterMeter,\n        related_name=\"readings\",\n        on_delete=models.CASCADE,\n        verbose_name=\"Счетчик:\",\n        help_text=\"укажите счетчик, для которого вводятся показания\"\n    )\n    reading_date = models.DateField(",
+        "peekOfCode": "class WaterMeterData(models.Model):\n    \"\"\"Модель данных для каждого счетчика.\"\"\"\n    water_meter = models.ForeignKey(\n        WaterMeter,\n        related_name=\"readings\",\n        on_delete=models.CASCADE,\n        verbose_name=\"Счетчик:\",\n        help_text=\"укажите счетчик, для которого вводятся показания\"\n    )\n    date = models.DateField(",
         "detail": "jkh_assistant.infrastructure.models",
         "documentation": {}
     },
@@ -389,7 +729,7 @@
         "kind": 5,
         "importPath": "jkh_assistant.jkh_assistant.settings",
         "description": "jkh_assistant.jkh_assistant.settings",
-        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')",
         "detail": "jkh_assistant.jkh_assistant.settings",
         "documentation": {}
     },
@@ -398,7 +738,7 @@
         "kind": 5,
         "importPath": "jkh_assistant.jkh_assistant.settings",
         "description": "jkh_assistant.jkh_assistant.settings",
-        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nMAX_STR_LENGTH = 255",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nREST_FRAMEWORK = {",
         "detail": "jkh_assistant.jkh_assistant.settings",
         "documentation": {}
     },
@@ -407,7 +747,7 @@
         "kind": 5,
         "importPath": "jkh_assistant.jkh_assistant.settings",
         "description": "jkh_assistant.jkh_assistant.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nMAX_STR_LENGTH = 255",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nREST_FRAMEWORK = {\n    'DATE_FORMAT': \"%d.%m.%Y\",",
         "detail": "jkh_assistant.jkh_assistant.settings",
         "documentation": {}
     },
@@ -416,7 +756,7 @@
         "kind": 5,
         "importPath": "jkh_assistant.jkh_assistant.settings",
         "description": "jkh_assistant.jkh_assistant.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nMAX_STR_LENGTH = 255",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nREST_FRAMEWORK = {\n    'DATE_FORMAT': \"%d.%m.%Y\",\n    'TIME_FORMAT': \"%H:%M\",",
         "detail": "jkh_assistant.jkh_assistant.settings",
         "documentation": {}
     },
@@ -425,7 +765,43 @@
         "kind": 5,
         "importPath": "jkh_assistant.jkh_assistant.settings",
         "description": "jkh_assistant.jkh_assistant.settings",
-        "peekOfCode": "STATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nMAX_STR_LENGTH = 255",
+        "peekOfCode": "STATIC_URL = \"/static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nREST_FRAMEWORK = {\n    'DATE_FORMAT': \"%d.%m.%Y\",\n    'TIME_FORMAT': \"%H:%M\",\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 20,\n    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nREST_FRAMEWORK = {\n    'DATE_FORMAT': \"%d.%m.%Y\",\n    'TIME_FORMAT': \"%H:%M\",\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 20,\n    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],\n    \"DEFAULT_PERMISSION_CLASSES\": [",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nREST_FRAMEWORK = {\n    'DATE_FORMAT': \"%d.%m.%Y\",\n    'TIME_FORMAT': \"%H:%M\",\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 20,\n    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\"",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nREST_FRAMEWORK = {\n    'DATE_FORMAT': \"%d.%m.%Y\",\n    'TIME_FORMAT': \"%H:%M\",\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 20,\n    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\"\n    ],",
+        "detail": "jkh_assistant.jkh_assistant.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "jkh_assistant.jkh_assistant.settings",
+        "description": "jkh_assistant.jkh_assistant.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DATE_FORMAT': \"%d.%m.%Y\",\n    'TIME_FORMAT': \"%H:%M\",\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 20,\n    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\"\n    ],\n}",
         "detail": "jkh_assistant.jkh_assistant.settings",
         "documentation": {}
     },
@@ -452,7 +828,7 @@
         "kind": 5,
         "importPath": "jkh_assistant.jkh_assistant.urls",
         "description": "jkh_assistant.jkh_assistant.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include(\"api.urls\"))\n]\nif settings.DEBUG:\n    urlpatterns += static(\n        settings.STATIC_URL, document_root=settings.STATIC_ROOT\n    )\n    urlpatterns += static(\n        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT",
         "detail": "jkh_assistant.jkh_assistant.urls",
         "documentation": {}
     },
@@ -472,6 +848,123 @@
         "description": "jkh_assistant.manage",
         "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'jkh_assistant.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
         "detail": "jkh_assistant.manage",
+        "documentation": {}
+    },
+    {
+        "label": "HouseFactory",
+        "kind": 6,
+        "importPath": "tests.fixtures.factories",
+        "description": "tests.fixtures.factories",
+        "peekOfCode": "class HouseFactory(factory.django.DjangoModelFactory):\n    class Meta:\n        model = House\n    address = factory.Faker(\"address\")\n    name = factory.Faker(\"word\")\nclass ApartmentFactory(factory.django.DjangoModelFactory):\n    class Meta:\n        model = Apartment\n    house = factory.SubFactory(HouseFactory)\n    number = factory.Sequence(lambda n: n + 1)",
+        "detail": "tests.fixtures.factories",
+        "documentation": {}
+    },
+    {
+        "label": "ApartmentFactory",
+        "kind": 6,
+        "importPath": "tests.fixtures.factories",
+        "description": "tests.fixtures.factories",
+        "peekOfCode": "class ApartmentFactory(factory.django.DjangoModelFactory):\n    class Meta:\n        model = Apartment\n    house = factory.SubFactory(HouseFactory)\n    number = factory.Sequence(lambda n: n + 1)\n    area = factory.Faker(\"random_int\", min=30, max=200)\nclass WaterMeterFactory(factory.django.DjangoModelFactory):\n    class Meta:\n        model = WaterMeter\n    apartment = factory.SubFactory(ApartmentFactory)",
+        "detail": "tests.fixtures.factories",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeterFactory",
+        "kind": 6,
+        "importPath": "tests.fixtures.factories",
+        "description": "tests.fixtures.factories",
+        "peekOfCode": "class WaterMeterFactory(factory.django.DjangoModelFactory):\n    class Meta:\n        model = WaterMeter\n    apartment = factory.SubFactory(ApartmentFactory)\n    serial_number = factory.Faker(\"ean13\")\nclass WaterMeterDataFactory(factory.django.DjangoModelFactory):\n    class Meta:\n        model = WaterMeterData\n    date = factory.Faker(\"date\")\n    value = factory.Faker(\"pyfloat\", positive=True, min_value=1, max_value=10000)",
+        "detail": "tests.fixtures.factories",
+        "documentation": {}
+    },
+    {
+        "label": "WaterMeterDataFactory",
+        "kind": 6,
+        "importPath": "tests.fixtures.factories",
+        "description": "tests.fixtures.factories",
+        "peekOfCode": "class WaterMeterDataFactory(factory.django.DjangoModelFactory):\n    class Meta:\n        model = WaterMeterData\n    date = factory.Faker(\"date\")\n    value = factory.Faker(\"pyfloat\", positive=True, min_value=1, max_value=10000)\n    water_meter = factory.SubFactory(WaterMeterFactory)\nclass TariffFactory(factory.django.DjangoModelFactory):\n    class Meta:\n        model = Tariff\n    name = factory.Faker(\"word\")",
+        "detail": "tests.fixtures.factories",
+        "documentation": {}
+    },
+    {
+        "label": "TariffFactory",
+        "kind": 6,
+        "importPath": "tests.fixtures.factories",
+        "description": "tests.fixtures.factories",
+        "peekOfCode": "class TariffFactory(factory.django.DjangoModelFactory):\n    class Meta:\n        model = Tariff\n    name = factory.Faker(\"word\")\n    price_per_unit = factory.Faker(\"random_int\", min=1, max=100)",
+        "detail": "tests.fixtures.factories",
+        "documentation": {}
+    },
+    {
+        "label": "house",
+        "kind": 2,
+        "importPath": "tests.fixtures.fixture_infrastructure",
+        "description": "tests.fixtures.fixture_infrastructure",
+        "peekOfCode": "def house():\n    return HouseFactory.create_batch(5)\n@pytest.fixture\ndef apartment(house):\n    return ApartmentFactory.create_batch(5)\n@pytest.fixture\ndef water_meter(apartment):\n    return WaterMeterFactory.create_batch(5)\n@pytest.fixture\ndef water_meter_data():",
+        "detail": "tests.fixtures.fixture_infrastructure",
+        "documentation": {}
+    },
+    {
+        "label": "apartment",
+        "kind": 2,
+        "importPath": "tests.fixtures.fixture_infrastructure",
+        "description": "tests.fixtures.fixture_infrastructure",
+        "peekOfCode": "def apartment(house):\n    return ApartmentFactory.create_batch(5)\n@pytest.fixture\ndef water_meter(apartment):\n    return WaterMeterFactory.create_batch(5)\n@pytest.fixture\ndef water_meter_data():\n    return WaterMeterDataFactory.create_batch(5)\n@pytest.fixture\ndef tariff():",
+        "detail": "tests.fixtures.fixture_infrastructure",
+        "documentation": {}
+    },
+    {
+        "label": "water_meter",
+        "kind": 2,
+        "importPath": "tests.fixtures.fixture_infrastructure",
+        "description": "tests.fixtures.fixture_infrastructure",
+        "peekOfCode": "def water_meter(apartment):\n    return WaterMeterFactory.create_batch(5)\n@pytest.fixture\ndef water_meter_data():\n    return WaterMeterDataFactory.create_batch(5)\n@pytest.fixture\ndef tariff():\n    return TariffFactory.create_batch(5)\n@pytest.fixture\ndef anonymous_user(client):",
+        "detail": "tests.fixtures.fixture_infrastructure",
+        "documentation": {}
+    },
+    {
+        "label": "water_meter_data",
+        "kind": 2,
+        "importPath": "tests.fixtures.fixture_infrastructure",
+        "description": "tests.fixtures.fixture_infrastructure",
+        "peekOfCode": "def water_meter_data():\n    return WaterMeterDataFactory.create_batch(5)\n@pytest.fixture\ndef tariff():\n    return TariffFactory.create_batch(5)\n@pytest.fixture\ndef anonymous_user(client):\n    \"\"\"Фикстура для анонимного пользователя.\"\"\"\n    client.logout()\n    return client",
+        "detail": "tests.fixtures.fixture_infrastructure",
+        "documentation": {}
+    },
+    {
+        "label": "tariff",
+        "kind": 2,
+        "importPath": "tests.fixtures.fixture_infrastructure",
+        "description": "tests.fixtures.fixture_infrastructure",
+        "peekOfCode": "def tariff():\n    return TariffFactory.create_batch(5)\n@pytest.fixture\ndef anonymous_user(client):\n    \"\"\"Фикстура для анонимного пользователя.\"\"\"\n    client.logout()\n    return client\n{\n    \"count\": 16,\n    \"next\": None,",
+        "detail": "tests.fixtures.fixture_infrastructure",
+        "documentation": {}
+    },
+    {
+        "label": "anonymous_user",
+        "kind": 2,
+        "importPath": "tests.fixtures.fixture_infrastructure",
+        "description": "tests.fixtures.fixture_infrastructure",
+        "peekOfCode": "def anonymous_user(client):\n    \"\"\"Фикстура для анонимного пользователя.\"\"\"\n    client.logout()\n    return client\n{\n    \"count\": 16,\n    \"next\": None,\n    \"previous\": None,\n    \"results\": [\n        {",
+        "detail": "tests.fixtures.fixture_infrastructure",
+        "documentation": {}
+    },
+    {
+        "label": "pytest_plugins",
+        "kind": 5,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "pytest_plugins = [\n    'tests.fixtures.fixture_infrastructure',\n]",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "kind": 6,
+        "importPath": "tests.test_house",
+        "description": "tests.test_house",
+        "peekOfCode": "class TestCase:\n    @pytest.mark.django_db(transaction=True)\n    def test_house(self, water_meter_data, client):\n        response = client.get(\"/api/v1/house/\")\n        print(response.json())\n        assert 2 == 1, ('aslkfjwr')",
+        "detail": "tests.test_house",
         "documentation": {}
     }
 ]

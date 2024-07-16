@@ -1,6 +1,12 @@
 from django.contrib import admin
 
-from infrastructure.models import House, Apartment, Tariff, WaterMeter, WaterMeterData
+from infrastructure.models import (
+    House,
+    Tariff,
+    Apartment,
+    WaterMeter,
+    WaterMeterData,
+)
 
 
 admin.site.register(House)
