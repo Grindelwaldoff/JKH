@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", False)
+DEBUG = os.getenv('DEBUG') == 'True'
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "*").split(",")
 ALLOWED_ORIGINS = []
@@ -92,7 +92,7 @@ WSGI_APPLICATION = "jkh_assistant.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("DB_NAME", "postgres"),
+        "NAME": os.environ.get("POSTGRES_DB", "postgres"),
         "USER": os.environ.get("POSTGRES_USER", "postgres"),
         "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "postgres"),
         "HOST": os.environ.get("DB_HOST", "db"),
@@ -163,7 +163,7 @@ REST_FRAMEWORK = {
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "TransportStatsApi",
+    "TITLE": "JKH_Assistant",
     "DESCRIPTION": "...",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,

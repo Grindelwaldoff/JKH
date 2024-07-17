@@ -76,7 +76,6 @@ class WaterMeterData(models.Model):
         help_text="укажите счетчик, для которого вводятся показания",
     )
     date = models.DateField(
-        auto_now_add=True,
         verbose_name="Дата показания:",
         help_text="укажите дату снятия показания",
     )

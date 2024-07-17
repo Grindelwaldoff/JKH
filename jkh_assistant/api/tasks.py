@@ -29,8 +29,8 @@ def calculate_water_meters_values(apartment: Apartment, tariff: Tariff):
 @shared_task
 def bills_calculation():
     # подсчет всех показателей счетчиков для каждого дома
-    print(Tariff.objects.all())
-    rent_tariff, meter_tariff = Tariff.objects.all()
+    rent_tariff = Tariff.objects.get(name="rent")
+    meter_tariff = Tariff.objects.get(name="water_bill")
     result = []
     for apartment in Apartment.objects.all():
         rent = apartment.area * rent_tariff.price_per_unit

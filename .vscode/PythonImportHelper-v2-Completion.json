@@ -840,7 +840,7 @@
         "kind": 2,
         "importPath": "jkh_assistant.api.tasks",
         "description": "jkh_assistant.api.tasks",
-        "peekOfCode": "def bills_calculation():\n    # подсчет всех показателей счетчиков для каждого дома\n    print(Tariff.objects.all())\n    rent_tariff, meter_tariff = Tariff.objects.all()\n    result = []\n    for apartment in Apartment.objects.all():\n        rent = apartment.area * rent_tariff.price_per_unit\n        meter = calculate_water_meters_values(apartment, meter_tariff)\n        CalculationResults.objects.get_or_create(\n            apartment=apartment, result=rent, type=\"rent\"",
+        "peekOfCode": "def bills_calculation():\n    # подсчет всех показателей счетчиков для каждого дома\n    rent_tariff = Tariff.objects.get(name=\"rent\")\n    meter_tariff = Tariff.objects.get(name=\"water_bill\")\n    result = []\n    for apartment in Apartment.objects.all():\n        rent = apartment.area * rent_tariff.price_per_unit\n        meter = calculate_water_meters_values(apartment, meter_tariff)\n        CalculationResults.objects.get_or_create(\n            apartment=apartment, result=rent, type=\"rent\"",
         "detail": "jkh_assistant.api.tasks",
         "documentation": {}
     },
@@ -1047,7 +1047,7 @@
         "kind": 5,
         "importPath": "jkh_assistant.jkh_assistant.settings",
         "description": "jkh_assistant.jkh_assistant.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.getenv(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = os.getenv(\"DEBUG\", False)\nALLOWED_HOSTS = os.getenv(\"ALLOWED_HOSTS\", \"*\").split(\",\")\nALLOWED_ORIGINS = []\ndomains = os.getenv(\"ALLOWED_ORIGINS\", \"127.0.0.1\").split(\",\")",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.getenv(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = os.getenv('DEBUG') == 'True'\nALLOWED_HOSTS = os.getenv(\"ALLOWED_HOSTS\", \"*\").split(\",\")\nALLOWED_ORIGINS = []\ndomains = os.getenv(\"ALLOWED_ORIGINS\", \"127.0.0.1\").split(\",\")",
         "detail": "jkh_assistant.jkh_assistant.settings",
         "documentation": {}
     },
@@ -1056,7 +1056,7 @@
         "kind": 5,
         "importPath": "jkh_assistant.jkh_assistant.settings",
         "description": "jkh_assistant.jkh_assistant.settings",
-        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = os.getenv(\"DEBUG\", False)\nALLOWED_HOSTS = os.getenv(\"ALLOWED_HOSTS\", \"*\").split(\",\")\nALLOWED_ORIGINS = []\ndomains = os.getenv(\"ALLOWED_ORIGINS\", \"127.0.0.1\").split(\",\")\nfor i in domains:\n    ALLOWED_ORIGINS.append(f\"http://{i}\")\n    ALLOWED_ORIGINS.append(f\"https://{i}\")\nCSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()",
+        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = os.getenv('DEBUG') == 'True'\nALLOWED_HOSTS = os.getenv(\"ALLOWED_HOSTS\", \"*\").split(\",\")\nALLOWED_ORIGINS = []\ndomains = os.getenv(\"ALLOWED_ORIGINS\", \"127.0.0.1\").split(\",\")\nfor i in domains:\n    ALLOWED_ORIGINS.append(f\"http://{i}\")\n    ALLOWED_ORIGINS.append(f\"https://{i}\")\nCSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()",
         "detail": "jkh_assistant.jkh_assistant.settings",
         "documentation": {}
     },
@@ -1065,7 +1065,7 @@
         "kind": 5,
         "importPath": "jkh_assistant.jkh_assistant.settings",
         "description": "jkh_assistant.jkh_assistant.settings",
-        "peekOfCode": "DEBUG = os.getenv(\"DEBUG\", False)\nALLOWED_HOSTS = os.getenv(\"ALLOWED_HOSTS\", \"*\").split(\",\")\nALLOWED_ORIGINS = []\ndomains = os.getenv(\"ALLOWED_ORIGINS\", \"127.0.0.1\").split(\",\")\nfor i in domains:\n    ALLOWED_ORIGINS.append(f\"http://{i}\")\n    ALLOWED_ORIGINS.append(f\"https://{i}\")\nCSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()\nCORS_ALLOWED_ORIGINS = ALLOWED_ORIGINS\n# Application definition",
+        "peekOfCode": "DEBUG = os.getenv('DEBUG') == 'True'\nALLOWED_HOSTS = os.getenv(\"ALLOWED_HOSTS\", \"*\").split(\",\")\nALLOWED_ORIGINS = []\ndomains = os.getenv(\"ALLOWED_ORIGINS\", \"127.0.0.1\").split(\",\")\nfor i in domains:\n    ALLOWED_ORIGINS.append(f\"http://{i}\")\n    ALLOWED_ORIGINS.append(f\"https://{i}\")\nCSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()\nCORS_ALLOWED_ORIGINS = ALLOWED_ORIGINS\n# Application definition",
         "detail": "jkh_assistant.jkh_assistant.settings",
         "documentation": {}
     },
@@ -1155,7 +1155,7 @@
         "kind": 5,
         "importPath": "jkh_assistant.jkh_assistant.settings",
         "description": "jkh_assistant.jkh_assistant.settings",
-        "peekOfCode": "WSGI_APPLICATION = \"jkh_assistant.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.postgresql\",\n        \"NAME\": os.environ.get(\"DB_NAME\", \"postgres\"),\n        \"USER\": os.environ.get(\"POSTGRES_USER\", \"postgres\"),\n        \"PASSWORD\": os.environ.get(\"POSTGRES_PASSWORD\", \"postgres\"),\n        \"HOST\": os.environ.get(\"DB_HOST\", \"db\"),",
+        "peekOfCode": "WSGI_APPLICATION = \"jkh_assistant.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.postgresql\",\n        \"NAME\": os.environ.get(\"POSTGRES_DB\", \"postgres\"),\n        \"USER\": os.environ.get(\"POSTGRES_USER\", \"postgres\"),\n        \"PASSWORD\": os.environ.get(\"POSTGRES_PASSWORD\", \"postgres\"),\n        \"HOST\": os.environ.get(\"DB_HOST\", \"db\"),",
         "detail": "jkh_assistant.jkh_assistant.settings",
         "documentation": {}
     },
@@ -1164,7 +1164,7 @@
         "kind": 5,
         "importPath": "jkh_assistant.jkh_assistant.settings",
         "description": "jkh_assistant.jkh_assistant.settings",
-        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.postgresql\",\n        \"NAME\": os.environ.get(\"DB_NAME\", \"postgres\"),\n        \"USER\": os.environ.get(\"POSTGRES_USER\", \"postgres\"),\n        \"PASSWORD\": os.environ.get(\"POSTGRES_PASSWORD\", \"postgres\"),\n        \"HOST\": os.environ.get(\"DB_HOST\", \"db\"),\n        \"PORT\": os.environ.get(\"DB_PORT\", \"5432\"),\n    }\n}",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.postgresql\",\n        \"NAME\": os.environ.get(\"POSTGRES_DB\", \"postgres\"),\n        \"USER\": os.environ.get(\"POSTGRES_USER\", \"postgres\"),\n        \"PASSWORD\": os.environ.get(\"POSTGRES_PASSWORD\", \"postgres\"),\n        \"HOST\": os.environ.get(\"DB_HOST\", \"db\"),\n        \"PORT\": os.environ.get(\"DB_PORT\", \"5432\"),\n    }\n}",
         "detail": "jkh_assistant.jkh_assistant.settings",
         "documentation": {}
     },
@@ -1263,7 +1263,7 @@
         "kind": 5,
         "importPath": "jkh_assistant.jkh_assistant.settings",
         "description": "jkh_assistant.jkh_assistant.settings",
-        "peekOfCode": "SPECTACULAR_SETTINGS = {\n    \"TITLE\": \"TransportStatsApi\",\n    \"DESCRIPTION\": \"...\",\n    \"VERSION\": \"1.0.0\",\n    \"SERVE_INCLUDE_SCHEMA\": False,\n    \"ENUM_NAME_OVERRIDES\": {\"status\": \"CustomStatusEnum\"},\n    \"ENUM_ADD_EXPLICIT_BLANK_NULL_CHOICE\": True,\n}\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://localhost:6379/0\")",
+        "peekOfCode": "SPECTACULAR_SETTINGS = {\n    \"TITLE\": \"JKH_Assistant\",\n    \"DESCRIPTION\": \"...\",\n    \"VERSION\": \"1.0.0\",\n    \"SERVE_INCLUDE_SCHEMA\": False,\n    \"ENUM_NAME_OVERRIDES\": {\"status\": \"CustomStatusEnum\"},\n    \"ENUM_ADD_EXPLICIT_BLANK_NULL_CHOICE\": True,\n}\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://localhost:6379/0\")",
         "detail": "jkh_assistant.jkh_assistant.settings",
         "documentation": {}
     },
