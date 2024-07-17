@@ -10,6 +10,7 @@ from infrastructure.models import (
 
 
 def calculate_water_meters_values(apartment: Apartment, tariff: Tariff):
+    # подсчет коммуналки для счетчиков
     result = 0
     for water_meter in WaterMeter.objects.filter(apartment=apartment.id):
         if len(water_meter.readings.all()) >= 2:

@@ -831,7 +831,7 @@
         "kind": 2,
         "importPath": "jkh_assistant.api.tasks",
         "description": "jkh_assistant.api.tasks",
-        "peekOfCode": "def calculate_water_meters_values(apartment: Apartment, tariff: Tariff):\n    result = 0\n    for water_meter in WaterMeter.objects.filter(apartment=apartment.id):\n        if len(water_meter.readings.all()) >= 2:\n            water_meter_readings = water_meter.readings.all().order_by(\n                \"-date\"\n            )[:3]\n            print(water_meter_readings)\n            result += tariff.price_per_unit * (\n                water_meter_readings[0].value - water_meter_readings[1].value",
+        "peekOfCode": "def calculate_water_meters_values(apartment: Apartment, tariff: Tariff):\n    # подсчет коммуналки для счетчиков\n    result = 0\n    for water_meter in WaterMeter.objects.filter(apartment=apartment.id):\n        if len(water_meter.readings.all()) >= 2:\n            water_meter_readings = water_meter.readings.all().order_by(\n                \"-date\"\n            )[:3]\n            print(water_meter_readings)\n            result += tariff.price_per_unit * (",
         "detail": "jkh_assistant.api.tasks",
         "documentation": {}
     },
